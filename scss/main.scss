@@ -1,0 +1,1956 @@
+// ============ start of media queries ==============
+// -Mobile first principle START-
+
+@mixin mobile {
+  @media (max-width: 420px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+// -Mobile first principle END-
+// ============ end of media queries ==============
+
+// ============== fonts ==========================
+
+//Open Sans
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Extrabold";
+  font-weight: 900;
+  src: url("../fonts/OpenSans/OpenSans-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-weight: bold;
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Semibold";
+  font-weight: 600;
+  src: url("../fonts/OpenSans/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Regular";
+  font-weight: 400;
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+  font-weight: 100;
+  src: url("../fonts/OpenSans/OpenSans-Light.ttf");
+}
+
+//KGSecond
+@font-face {
+  font-family: "KGSecond";
+  font-weight: bold;
+  src: url("../fonts/KGSecond/KGSecondChancesSolid.ttf");
+}
+
+//Source Sans
+@font-face {
+  font-family: "Source Sans Black";
+  font-weight: 900;
+  src: url("../fonts/SourseSansPro/SourceSansPro-Black.otf");
+}
+@font-face {
+  font-family: "Source Sans Bold";
+  font-weight: bold;
+  src: url("../fonts/SourseSansPro/SourceSansPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "Source Sans Semibold";
+  font-weight: 600;
+  src: url("../fonts/SourseSansPro/SourceSansPro-Semibold.otf");
+}
+
+@font-face {
+  font-family: "Source Sans Regular";
+  font-weight: 400;
+  src: url("../fonts/SourseSansPro/SourceSansPro-Regular.otf");
+}
+
+// ============== end of fonts =======================
+
+input, textarea, button {
+  outline: 0 !important;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  min-width: 320px;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
+ul, li {
+  text-decoration: none;
+  // list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+span {
+  font-size: 25px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background: url("../img/Desktop/Header.jpg") no-repeat #29bab5 center bottom;
+  background-size: cover ;
+  padding: 30px 0 60px;
+  @include laptop{
+    background-size: cover;
+  }
+  @include tablet {
+    padding-bottom: 30px;
+  }
+  .logo {
+    width: 62vw;
+    max-width: 780px;
+    margin: 0 auto;
+    @include tablet {
+      width: 74vw;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .social {
+    position: absolute;
+    top: 70px;
+    right: 60px;
+    a {
+      font-size: 30px;
+      color: #ffe123;
+      margin-left: 30px;
+      transition: 0.2s;
+      &:hover{
+        color: #000;
+      }
+      @include laptop {
+        margin-left: 2vw;
+      }
+    }
+    @include laptop {
+      top: 5vw;
+      right: 5vw;
+    }
+    @include tablet {
+      position: static;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  h1 {
+    margin-top: 20px;
+    font: 60px "Open Sans Bold", sans-sefif;
+    color: #fff;
+    text-align: center;
+    @include laptop {
+      font-size: 5vw;
+    }
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  .start-container {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    .start__image {
+      width: 45%;
+      text-align: right;
+      @include tablet {
+        width: 100%;
+        text-align: center;
+      }
+      img {
+        max-height: 600px;
+        max-width: 80%;
+        @include tablet {
+
+        }
+
+      }
+    }
+    .start {
+      width: 55%;
+      @include tablet {
+        width: 100%;
+      }
+      .start__title {
+        text-align: center;
+        margin: 0 auto 0;
+        font: 180px "Source Sans Black", sans-serif;
+        font-weight: 900;
+        color: #fff;
+        line-height: 180px;
+        @include laptop {
+          font-size: 17vw;
+        }
+        @include tablet {
+          line-height: 1;
+        }
+
+      }
+      .start__subtitle {
+
+        width: 100%;
+        text-align: center;
+        font: 46px "Open Sans Bold";
+        font-weight: bold;
+        color: #2b2523;
+        @include laptop {
+          font-size: 5.8vw;
+          font-weight: 900;
+        }
+      }
+      .start__buttons-box {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        @include tablet {
+          display: block;
+        }
+
+        a {
+          display: block;
+          margin: 0 20px;
+          width: 40%;
+          height: 64px;
+          border-radius: 32px;
+          font: 20px "Open Sans Semibold", sans-serif;
+          color: #fff;
+          line-height: 64px;
+          text-align: center;
+          transition: 0.2s;
+          @include tablet {
+            margin: 10px auto;
+            width: 200px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 14px;
+          }
+          &.want {
+            background: #ffe123;
+            color: #000;
+            &:hover{
+              background: #000;
+              color: #fff;
+            }
+          }
+          &.already {
+            background: rgba(#fff, 0.35);
+          }
+          &:hover {
+            background: #ffe123;
+            color: #000;
+          }
+        }
+      }
+      .start__slogan-box {
+        position: relative;
+        height: 400px;
+        list-style: disc;
+        @include tablet {
+          height: 80vw;
+        }
+        > li {
+          font-family: "Source Sans Bold", sans-serif;
+          position: absolute;
+        }
+
+        .first {
+          top: 12%;
+          right: 5%;
+          color: #f75015;
+          font-size: 54px;
+          transform: rotate(-25deg);
+          font-family: "Source Sans Black", sans-serif;
+          @include laptop {
+            font-size: 4.5vw;
+          }
+          @include tablet {
+            font-size: 7vw;
+            transform: rotate(-15deg);
+          }
+
+        }
+        .second {
+          top: 25%;
+          left: 10%;
+          color: #ffe123;
+          font-size: 36px;
+          transform: rotate(12deg);
+          @include laptop {
+            font-size: 3.5vw;
+          }
+          @include tablet {
+            font-size: 7vw;
+          }
+        }
+        .third {
+          top: 50%;
+          left: 30%;
+          color: #f75015;
+          font-size: 40px;
+          transform: rotate(-5deg);
+          @include laptop {
+            left: 25%;
+            font-size: 3.5vw;
+          }
+          @include tablet {
+            font-size: 7vw;
+            left: 20%;
+          }
+        }
+        .fourth {
+          bottom: -10px;
+          left: 2%;
+          color: #ffe123;
+          font-size: 50px;
+          @include laptop {
+            font-size: 4vw;
+          }
+          @include tablet {
+            font-size: 7vw;
+            bottom: 20px;
+            left: 8%;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+.game{
+  background: #29bab5;
+  padding: 70px 0 120px;
+  @include tablet{
+    padding: 60px 0;
+  }
+  .fitness-game {
+    .game__title {
+      position: relative;
+      margin: 0 auto;
+      padding: 25px 0;
+      width: 90%;
+      border: 6px solid #fff;
+      color: #fff;
+      font: 40px "KGSecond", sans-serif;
+      text-align: center;
+      @include laptop {
+        font-size: 3.5vw
+      }
+      @include tablet {
+        font-size: 5vw;
+        border-width: 3px;
+        margin-top: 0;
+        padding: 20px 0;
+      }
+
+      .second-line {
+        color: #f75015;
+      }
+      &:before {
+        position: absolute;
+        top: 50%;
+        margin-top: -35px;
+        left: 10%;
+        content: "\e903";
+        font-size: 70px;
+        color: #f75015;
+        font-family: icomoon;
+        @include laptop {
+          left: 5%;
+        }
+        @include tablet {
+          display: none;
+        }
+
+      }
+      &:after {
+        position: absolute;
+        top: 50%;
+        margin-top: -35px;
+        right: 10%;
+        content: "\e902";
+        font-size: 70px;
+        color: #f75015;
+        font-family: icomoon;
+        @include laptop {
+          right: 5%;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+    .game__list {
+      margin: 80px auto 0;
+      width: 100%;
+      list-style: none;
+      font-size: 36px;
+      padding: 0px 10% 0 13%;
+      @include laptop {
+        font-size: 28px;
+      }
+      @include tablet {
+        font-size: 5vw;
+        padding-left: 10vw;
+        margin-top: 30px;
+      }
+      li {
+        width: 100%;
+        position: relative;
+        font-family: "Source Sans Semibold", sans-serif;
+        margin-bottom: 60px;
+        strong {
+          font-family: "Source Sans Bold", sans-serif;
+          color: #fff;
+        }
+        &:before {
+          position: absolute;
+          content: "\e904";
+          top: 10px;
+          left: -50px;
+          color: #f75015;
+          font-family: icomoon;
+          font-size: 20px;
+          @include tablet {
+            left: -7vw;
+            font-size: 4vw;
+            top: 5px;
+          }
+        }
+        @include tablet {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+article {
+  padding: 60px 0;
+  box-sizing: border-box;
+  background: #fff;
+  @include tablet {
+    padding: 5vw;
+  }
+  .quote {
+    width: 100%;
+    font: 36px "Source Sans Semibold", sans-serif;
+    color: #000;
+    text-align: center;
+    padding: 0 150px;
+    @include tablet{
+      font-family: "Source Sans Regular", sans-serif;
+    }
+    .quote--bold{
+      @include tablet {
+        display: block;
+        font-family: "Source Sans Bold", sans-serif;
+        font-size: 4.4vw;
+      }
+    }
+    strong {
+      font-family: "Source Sans Bold", sans-serif;
+      color: #f75015;
+    }
+    &.quote--grandma {
+      line-height: 1.4;
+    }
+    @include laptop {
+      font-size: 3vw;
+    }
+    @include tablet {
+      padding: 0;
+      font-size: 4.4vw;
+    }
+  }
+
+  &.arrow-l,
+  &.arrow-r {
+    position: relative;
+    line-height: 54px;
+    &:after {
+      position: absolute;
+      display: block;
+      font-size: 130px;
+      font-family: icomoon;
+      height: 130px;
+      line-height: 130px;
+      width: 130px;
+      top: 100%;
+      left: 50%;
+      margin-left: -75px;
+      margin-top: -60px;
+      @include tablet {
+        left: 70%;
+        font-size: 14vw;
+      }
+    }
+  }
+  &.arrow-l:after {
+    content: "\e906";
+  }
+  &.arrow-r:after {
+    content: "\e907";
+  }
+  &.arrow-r--left:after {
+    left: 15%;
+    @include tablet {
+      left: 40%;
+    }
+  }
+}
+
+.rules {
+  background: url("../img/Desktop/block_3.jpg") no-repeat center;
+  background-size: cover;
+  .rules_wrapper {
+    height: 600px;
+    background: url("../img/Desktop/man.png") no-repeat bottom right;
+    background-size: 70% auto;
+    @include laptop {
+      height: 50vw;
+    }
+    @include tablet {
+      background-image: url("../img/Mobile/man.png");
+      height: 80vw;
+    }
+    .cloud {
+      display: flex;
+      align-items: center;
+      background: url("../img/Desktop/booble_1_1.png") no-repeat center right;
+      background-size: contain;
+      width: 48%;
+      height: 100%;
+      padding-left: 5%;
+      box-sizing: border-box;
+      @include tablet {
+        width: 60%;
+      }
+      .cloud__title {
+        font: 28px "Source Sans Black", sans-serif;
+        color: #fe8d1c;
+        @include laptop {
+          font-size: 2.5vw;
+        }
+        @include tablet {
+          font-size: 3.2vw;
+        }
+      }
+      .cloud__list {
+        list-style: none;
+        li {
+          font: 24px "Source Sans Bold", sans-serif;
+          @include laptop {
+            font-size: 2.2vw;
+          }
+          @include tablet {
+            font-size: 3vw;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.clearout {
+  background: url("../img/Desktop/block_4.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 20px;
+  .clearout_wrapper {
+    height: 600px;
+    background: url("../img/Desktop/man_block4.png") no-repeat 0 100%;
+    background-size: contain;
+    @include laptop {
+      height: 50vw;
+    }
+    @include tablet {
+      height: 90vw;
+      background: url("../img/Mobile/man_block4.png") no-repeat 0 100%;
+      background-size: 70% auto;
+
+    }
+    .cloud__title {
+      margin-top: 60px;
+      font: 44px "KGSecond";
+      color: #2b2523;
+      text-align: center;
+      @include tablet {
+        font-size: 5vw;
+      }
+      &.cloud__title--mobile {
+        display: none;
+        @include tablet {
+          display: block;
+          margin-top: 5vw;
+        }
+      }
+    }
+    .cloud-box {
+      display: flex;
+      justify-content: flex-end;
+      div {
+        width: 45%;
+      }
+      .cloud__title {
+        margin-top: 60px;
+        font: 44px "KGSecond";
+        color: #2b2523;
+        @include laptop {
+          font-size: 3.6vw;
+        }
+        &.cloud__title--desktop {
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+
+      .cloud {
+        margin-top: 10%;
+        padding-top: 15%;
+        padding-right: 10%;
+        width: 100%;
+        height: 300px;
+        background: url("../img/Desktop/booble_2.png") no-repeat;
+        background-size: contain;
+        text-align: center;
+        box-sizing: border-box;
+        @include laptop {
+          padding-right: 0;
+        }
+        @include tablet {
+          margin-top: 50%;
+          padding-top: 10%;
+        }
+        .cloud__title {
+          margin-top: 20px;
+          font: 48px "Source Sans Black", sans-serif;
+          color: #fe8d1c;
+          @include laptop {
+            font-size: 4vw;
+          }
+        }
+        .cloud__list {
+          list-style: none;
+          li {
+            font: 36px "Source Sans Regular", sans-serif;
+            text-transform: uppercase;
+            @include laptop {
+              font-size: 3.5vw;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.grandma {
+  background: url("../img/Desktop/block_5.jpg") no-repeat center #2bbbb6;
+  background-size: cover;
+  padding-top: 50px;
+  box-sizing: border-box;
+  @include tablet{
+    background-image: none;
+  }
+  .grandma_wrapper {
+    height: 800px;
+    background: url("../img/Desktop/woman.png") no-repeat 100% 100%;
+    background-size: 60% auto;
+
+    @include laptop {
+      height: 66vw;
+    }
+    @include tablet {
+      background-image: url("../img/Mobile/woman.png");
+      height: 110vw;
+    }
+    .cloud-box {
+      display: flex;
+      justify-content: flex-start;
+      div {
+        width: 50%;
+        height: 100%;
+        font: 24px "Source Sans Regular", sans-serif;
+        @include tablet {
+          width: 70%;
+        }
+        .top-cloud {
+          position: relative;
+          margin-top: 5%;
+          height: 330px;
+          width: 95%;
+          background: url("../img/Desktop/booble_3.png") no-repeat;
+          background-size: contain;
+          box-sizing: border-box;
+          padding-top: 13%;
+          padding-left: 8%;
+          @include laptop {
+            height: 26vw;
+          }
+          @include tablet {
+            height: 50vw;
+            padding-top: 16%;
+            padding-left: 11%;
+          }
+          p {
+            width: 75%;
+            font-size: 24px;
+            @include laptop {
+              width: 70%;
+              font-size: 2vw;
+            }
+            @include tablet {
+              width: 90%;
+              font-size: 3.5vw;
+            }
+          }
+
+          &:after {
+            position: absolute;
+            display: block;
+            content: "\e906";
+            font-size: 130px;
+            font-family: icomoon;
+            line-height: 130px;
+            height: 130px;
+            width: 130px;
+            top: 72%;
+            right: 5%;
+            @include laptop {
+              font-size: 10vw;
+              top: 60%;
+              right: -10%;
+            }
+            @include tablet {
+              height: 50px;
+              width: 50px;
+              font-size: 15vw;
+              top: auto;
+              bottom: 0;
+              right: 0;
+              left: 60%;
+            }
+
+          }
+
+        }
+        .bottom-cloud {
+          position: relative;
+          margin-top: 5%;
+          margin-left: 15%;
+          width: 75%;
+          height: 300px;
+          background: url("../img/Desktop/booble_4.png") no-repeat;
+          background-size: contain;
+          box-sizing: border-box;
+          padding-top: 13%;
+          padding-left: 10%;
+          @include laptop {
+            height: 25vw;
+          }
+          @include tablet {
+            height: 36vw;
+            margin-top: 10%;
+            margin-left: 2%;
+          }
+          &:after {
+            position: absolute;
+            display: block;
+            content: "\e905";
+            font-size: 130px;
+            font-family: icomoon;
+            line-height: 130px;
+            height: 130px;
+            width: 130px;
+            top: 105%;
+            right: 10%;
+            @include laptop {
+              font-size: 100px;
+            }
+            @include tablet {
+              top:30vw;
+              font-size: 15vw;
+            }
+
+          }
+          p {
+            width: 80%;
+            @include laptop {
+              width: 70%;
+              font-size: 2vw;
+            }
+            @include tablet {
+              font-size: 3vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+article {
+  &.bodies {
+    //height: 280px;
+    padding: 80px 0;
+    box-sizing: border-box;
+    background: url('../img/Desktop/block_5_1.jpg') no-repeat center;
+    background-size: auto 100%;
+    @include laptop {
+      padding: 7vw 0;
+    }
+    @include tablet{
+      background: none;
+    }
+    .quote-top,
+    .quote-bottom {
+      font-family: "Source Sans Semibold", sans-serif;
+      text-align: center;
+    }
+    .quote-top {
+      color: #000;
+      font-size: 36px;
+      @include laptop {
+        font-size: 3vw;
+      }
+      @include tablet{
+        font-size: 5vw;
+      }
+
+    }
+    .quote-bottom {
+      color: #f75015;
+      font-size: 60px;
+      @include laptop {
+        font-size: 5vw;
+      }
+      @include tablet{
+        font-size: 6vw;
+      }
+    }
+  }
+}
+
+.prizes {
+  background: url("../img/Desktop/block_6.jpg") no-repeat center;
+  background-size: cover;
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  @include tablet{
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .prizes__title {
+    position: relative;
+    margin: 0 auto;
+    width: 56%;
+    padding: 40px 0;
+    text-align: center;
+    border: 6px solid #fff;
+    box-sizing: border-box;
+    color: white;
+    font: 48px "KGSecond", sans-serif;
+    @include laptop {
+      font-size: 4vw;
+    }
+    @include tablet{
+      width: 90%;
+      padding: 20px;
+      border-width:3px;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      content: "\e908";
+      font-size: 29px;
+      font-family: icomoon;
+      color: #ffe123;
+    }
+    &:before {
+      left: 10%;
+    }
+    &:after {
+      right: 10%;
+    }
+  }
+  .prizes-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include tablet{
+      margin-top: 35px;
+    }
+    .prizes-box {
+      width: 30%;
+      @include tablet{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom:40px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .title {
+        width: 100%;
+        text-align: center;
+        font: 30px "KGSecond", sans-serif;
+        color: #fff;
+        @include laptop {
+          font-size: 2.5vw;
+        }
+        @include tablet{
+          font-size: 5vw;
+        }
+      }
+
+      .prize {
+        margin-top: 40px;
+        width: 100%;
+        border-radius: 9px;
+        overflow: hidden;
+        height: 240px;
+        background: #fff no-repeat center 80%;
+        background-size: 60% auto;
+        @include tablet{
+          margin-top: 24px;
+          padding-bottom: 40px;
+          width: 46%;
+          height: 50vw;
+          background-size: 80% auto;
+        }
+
+        &.woman-first {
+          background-image: url('../img/Desktop/coins.png');
+          div {
+            background: #ffe123;
+          }
+          p {
+            font-size: 50px;
+            @include tablet{
+              margin-top: 10%;
+              font-size: 6vw;
+            }
+          }
+        }
+        &.woman-second {
+          background-image: url('../img/Desktop/iphone-m.png');
+          div {
+            background: #fd7120;
+          }
+          p {
+
+            @include tablet{
+              margin-top: 10%;
+              font-size: 6vw;
+            }
+          }
+        }
+        &.man-first {
+          background-image: url('../img/Desktop/macbook.png');
+          div {
+            background: #0dd5cc;
+          }
+          p {
+            @include tablet{
+              margin-top: 10%;
+              font-size: 5vw;
+            }
+          }
+        }
+        &.man-second {
+          background-image: url('../img/Desktop/iphone-w.png');
+          div {
+            background: #5e3bea;
+          }
+          p {
+            @include tablet{
+              margin-top: 10%;
+              font-size: 6vw;
+            }
+          }
+        }
+        &.family-first {
+          background-image: url('../img/Desktop/trip.png');
+          div {
+            background: #f75015;
+          }
+          p {
+
+            @include tablet{
+              margin-top: 5%;
+              font-size: 4.5vw;
+              text-transform: uppercase;
+            }
+          }
+          .snippet{
+            @include tablet{
+              margin-top: 0;
+              font-size: 3vw;
+            }
+          }
+
+        }
+
+
+        .position {
+          text-align: center;
+          font: 36px "Source Sans Bold", sans-serif;
+          color: white;
+          margin: -140px auto 0;
+          padding-top: 140px;
+          width: 200px;
+          height: 200px;
+          border-radius: 0 0 100% 100%;
+          @include tablet{
+            width: 30vw;
+            height: 30vw;
+            margin: -18vw auto 0;
+            padding-top: 20vw;
+            font-size: 5vw;
+          }
+          small{
+            font-size: 0.5em;
+          }
+        }
+        p {
+          text-align: center;
+          font: 30px "Source Sans Bold", sans-serif;
+          color: #2b2523;
+
+
+        }
+        .snippet {
+          text-transform: uppercase;
+          text-align: center;
+          font: 14px "Source Sans Semibold", sans-serif;
+          color: #808080;
+          @include tablet{
+            font-size: 2vw;
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+article {
+  &.more {
+    height: 380px;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('../img/Desktop/block_6_1.jpg') no-repeat center;
+    background-size: auto 100%;
+    @include laptop {
+      height: 33vw;
+    }
+    @include tablet{
+      height: 40vw;
+    }
+    .clouds {
+      position: relative;
+      width: 100%;
+      .cloud__top {
+        position: absolute;
+        top: -25px;
+        left: 20%;
+        width: 20%;
+        height: 200px;
+        background: url('../img/Desktop/booble_5_1.png') no-repeat;
+        background-size: 100% auto;
+        box-sizing: border-box;
+        padding-top: 5%;
+        text-align: center;
+        font: 30px "Source Sans Bold", sans-serif;
+        color: #f75015;
+        @include laptop {
+          font-size: 2.8vw;
+        }
+        @include tablet{
+          left: 10%;
+          width: 30%;
+          padding-top: 7%;
+          font-size: 3.8vw;
+          top: -10px;
+        }
+      }
+      .cloud__bottom {
+        position: absolute;
+        top: 0;
+        left: 35%;
+        width: 40%;
+        height: 380px;
+        background: url('../img/Desktop/booble_5.png') no-repeat;
+        background-size: 100% auto;
+        box-sizing: border-box;
+        padding: 10% 5% 0 5%;
+        text-align: center;
+        font: 30px "Source Sans Semibold", sans-serif;
+        color: #2c899a;
+        text-transform: uppercase;
+        line-height: 50px;
+        @include laptop {
+          height: 33vw;
+          font-size: 2.5vw;
+          line-height: 1.5;
+        }
+        @include tablet{
+          height: 40vw;
+          width: 49%;
+          left: 32%;
+          font-size: 3vw;
+          line-height: 1.5;
+          padding-top: 13%;
+          font-family: "Source Sans Regular", sans-serif;
+        }
+        strong {
+          font-family: "Source Sans Bold", sans-serif;
+        }
+      }
+
+    }
+  }
+}
+
+.slider-container {
+  height: 1070px;
+  padding: 90px 0 150px;
+  box-sizing: border-box;
+  background: url('../img/Desktop/block_7.jpg') no-repeat center #0dd5cc;
+  background-size: auto 100%;
+
+
+  @include laptop {
+    height: auto;
+    padding-bottom: 90px;
+  }
+  @include tablet{
+    height: 120vw;
+    padding: 30px 0 50px;
+    background-image: none;
+  }
+  .slider__title {
+    font: 48px "KGSecond", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    @include laptop {
+      font-size: 4.5vw;
+    }
+  }
+
+  .slider__subtitle {
+    margin-top: 20px;
+    font: 36px "KGSecond", sans-serif;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    @include laptop {
+      font-size: 4vw;
+    }
+  }
+  .slider {
+    position: relative;
+    margin: 90px auto 0;
+    max-width: 680px;
+    @include laptop {
+      width: 70vw;
+    }
+    @include tablet{
+      margin-top: 10px;
+    }
+    .slider-img {
+      width: 100%;
+
+    }
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      font-size: 65px;
+      color: #ffe123;
+      width: 100px;
+      height: 70px;
+      > a {
+        background: center;
+        background-size: contain;
+        display: block;
+        height: 100%;
+        width: 100%;
+        @include tablet{
+          background-size: 20%;
+        }
+      }
+      @include tablet{
+        width: 40px;
+        height: 30px;
+      }
+    }
+
+    .prev {
+      left: -20%;
+      > a {
+        background: url("../img/Desktop/l-arrow.png") no-repeat;
+        @include tablet{
+          background-size: contain;
+        }
+      }
+    }
+    .next {
+      right: -20%;
+      > a {
+        background: url("../img/Desktop/r-arrow.png") no-repeat;
+        @include tablet{
+          background-size: contain;
+        }
+      }
+
+    }
+
+  }
+}
+
+.about-us-container {
+  .about-us {
+    padding-top: 60px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 1060px;
+    background: url('../img/Desktop/girls.png') no-repeat center bottom;
+    background-size: 94% auto;
+    @include laptop {
+      height: 93vw;
+    }
+    @include tablet{
+      padding-top: 20px;
+      height: 112vw;
+      background: url('../img/Mobile/girls.png')no-repeat center bottom;
+      background-size: 80% auto;
+    }
+    .title {
+      text-align: center;
+      font: 48px "KGSecond", sans-serif;
+      color: #2b2523;
+      @include laptop {
+        font-size: 4.5vw
+      }
+    }
+    .cloud {
+      margin: 40px auto 0;
+      padding: 5% 20px 0 40px;
+      width: 56%;
+      height: 43%;
+      background: url('../img/Desktop/booble_7.png') no-repeat center top;
+      background-size: 100% auto;
+      font: 24px "Source Sans Regular", szns-serif;
+      color: #2b2523;
+      line-height: 34px;
+      @include laptop {
+        margin-top: 2vw;
+        font-size: 2vw;
+        line-height: 1.5;
+        padding: 5% 3%;
+      }
+      @include tablet{
+        width: 80%;
+        height: 60%;
+        font-size: 3.2vw;
+        background-image: url(../img/Mobile/booble_7.png);
+        padding: 7%;
+      }
+    }
+  }
+}
+
+
+
+
+.get-in {
+    background-color: #46c4c0;
+    padding-top: 45px;
+    padding-bottom: 100px;
+    @include mobile {
+        padding-bottom: 35px;
+    }
+    .get-in-title {
+        color: white;
+        font-size: 48px;
+        font-family: "KGSecond";
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 40px;
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+    .get-in-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+            .get-in-element {
+                text-align: center;
+                width: 25%;
+                margin-bottom: 40px;
+                &:nth-child(7){
+                    .element-description {
+                        &.element-text {
+                            width: 17%;
+                        }
+                    }
+                }
+                &:nth-child(6){
+                    .element-description {
+                        &.element-text {
+                            width: 84%;
+                        }
+                    }
+                }
+                @include tablet {
+                   width: 32%;
+                }
+                @include mobile {
+                    width: 49%;
+                }                
+                .element-title {
+                    color: #ffe123;
+                    font-size: 10vw;
+                    text-shadow: 0px 3px 14px rgba(44, 137, 154, 0.74);
+                    @include mobile {
+                        font-size: 85px;
+                    }
+                }
+                .element-description {
+                    padding-top: 20px;
+                    position: relative;                    
+                    &.element-text {
+                        font-family: "Source Sans Semibold";
+                        font-size: 20px;
+                        color: white;
+                        width: 87%;
+                        text-transform: uppercase;
+                        margin: 0 auto;
+                        .closed-faces {
+                            font-size: 16px;
+                            display: block;
+                            text-transform: lowercase;
+                            @include mobile {
+                                font-size: 11px;
+                            }
+                        }
+                        @include tablet {
+                            font-size: 16px;
+                            width: 65%;
+                        }
+                        @include mobile {
+                            font-size: 12px;
+                        }                                                                        
+                    }
+                    .element-number {
+                        font-family: "Source Sans Bold";
+                        font-size: 72px;
+                        color: #fd7120;
+                        position: absolute; 
+                        left: -39px;
+                        top: 0;
+                        @include tablet {
+                            font-size: 50px;
+                            left: -25px;
+                            top: 10px;
+                        }
+                        @include mobile {
+                            font-size: 18px;
+                            left: -10px;
+                            top: 17px;
+                        }                                       
+                }
+            }
+        }
+    }
+}
+
+
+.exercise {
+    background: url("../img/Desktop/block_10.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 45px; 
+    padding-bottom: 60px;
+    @include mobile {
+        background: none;
+    }   
+    .exercise-title {
+        color: #2b2523;
+        font-size: 48px;
+        font-family: "KGSecond";
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 40px;
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+    .video-wrapper {
+        margin-bottom: 20px;
+        iframe {
+            max-width: 680px;
+            width: 100%;
+            max-height: 380px;
+            height: 380px;
+            @include mobile {
+                max-width: 280px;
+                max-height: 155px;
+            }
+        }
+    } 
+}
+
+
+
+.participation {
+    @include mobile {
+        padding-bottom: 50px;
+    }
+    background-color: #46c4c0;
+    padding-top: 45px;
+    padding-bottom: 100px;
+    .participation-title {
+        color: #2b2523;
+        font-size: 48px;
+        font-family: "KGSecond";
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        @include mobile {
+            font-size: 16px;
+            color: white;
+        }
+    }
+    .cost-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        @include mobile {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .cost-element {
+            width: 23%;
+            margin-bottom: 20px;
+            &:nth-child(3) {
+                .cost-block {
+                    .price-title {
+                       .hover-title {
+                        margin-bottom: 0px;
+                       } 
+                    }
+                }
+            }
+            @include tablet {
+                width: 48%;
+            }
+            .cost-title {
+                text-align: center;
+                @include mobile {
+                    min-height: 115px;
+                }
+                .ico-wrapper {
+                    position: relative;
+                    .icon-font-21 {
+                        z-index: 2;
+                        position: relative;
+                    }
+                    .icon-font-22 {
+                        position: absolute;
+                        left: -2px;
+                        z-index: 1;
+                        top: -23px;
+                        color: white;
+                        font-size: 44px;
+                    }
+                }
+                .rank-ico {
+                    font-size: 55px;
+                    color: #ffe123;
+                }
+                .rank {
+                    font-size: 18px;
+                    font-family: "KGSecond";
+                    color: #ffe123;
+                    padding-top: 20px;
+                    display: inline-block;
+                    width: 100%;
+                    text-transform: uppercase;
+                    @include tablet {
+                        min-height: 66px;
+                    }
+                    @include mobile {
+                        min-height: 53px;
+                        font-size: 12px;
+                    }                                        
+                }
+            }
+            .cost-block {
+                background-color: white;
+                min-height: 425px;
+                max-height: 492px;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-top: 20px;
+                padding: 25px 20px;
+                position: relative;
+                @include mobile {
+                    min-height: 0;
+                    max-height: 165px;
+                    padding: 5px 8px;
+                    margin-top: 5px;                        
+                }
+                .price-wrapper {
+                    position: relative;
+                    z-index: 10;
+                }
+                .price-title {
+                    text-align: center;
+                    border-bottom: 2px solid black;
+                    padding-bottom: 20px;
+                    max-height: 125px;
+                    @include mobile {
+                        padding-bottom: 5px;
+                    }
+                    .price {
+                        font-family: "Source Sans Semibold";
+                        font-size: 48px;
+                        @include mobile {
+                            font-size: 20px;
+                        }
+                    }
+                    .hover-title {
+                        font-family: "KGSecond";
+                        text-transform: uppercase;
+                        font-size: 24px;
+                        display: block;
+                        margin-bottom: 13px;
+                        display: none;
+                    }
+                }
+                .price-description {
+                    padding: 50px 0px;
+                    @include mobile {
+                        font-size: 13px;
+                        padding: 15px 0px;                        
+                    }
+                    p {
+                        text-align: center;
+                        color: #808080;
+                        font-family: "Open Sans Regular";
+                        font-size: 16px;
+                        margin-bottom: 50px;
+                        @include mobile {
+                            margin-bottom: 15px;
+                            max-height: 65px;
+                            overflow: hidden;
+                            font-size: 13px;
+                            margin-bottom: 0px;
+                            line-height: 16px                        
+                        }
+                    }
+                    .price-btn {
+                        background-color: #ffe123;
+                        width: 80%;
+                        display: block;
+                        margin: 0 auto;
+                        text-align: center;
+                        padding: 15px 0;
+                        border-radius: 20px;
+                        font-family: "Source Sans Semibold";
+                        font-size: 16px;
+                        transition: 0.2s;
+                        &:hover {
+                            background-color: black;
+                            color: white;
+                        }
+                        @include mobile {
+                            background: none;
+                            text-decoration: underline;
+                            padding: 0;
+                            padding-top: 10px;
+                            &:hover {
+                                background-color: transparent;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+                .hide-icon {
+                    position: absolute;
+                    font-size: 458px;
+                    top: -30px;
+                    left: -170px;
+                    z-index: 1;
+                    color: #e9f3f5;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+.attention {
+    display: flex;
+    justify-content: center;    
+    .container {
+        h2 {
+            text-transform: uppercase;
+            font-family: "KGSecond";
+            font-size: 80px;
+            text-align: center;
+            margin-bottom: 25px;
+            @include laptop {
+                font-size: 50px;                        
+            }
+            @include tablet {
+                font-size: 30px;                        
+            }
+            @include mobile {
+                font-size: 18px;
+                margin-top: 15px;
+                margin-bottom: 15px;                        
+            }
+           .icon {
+                font-size: 125px;
+                display: inline-block;
+                position: relative;
+                top: 25px;
+                @include laptop {
+                    font-size: 90px;                        
+                }
+                @include tablet {
+                    font-size: 70px;                        
+                }
+                @include mobile {
+                    top: 13px;
+                    font-size: 40px;                       
+                }
+           } 
+        }
+        .accordion-wrapper {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 50px;
+            flex-wrap: wrap;
+            @include mobile {
+                padding-top: 20px;
+                padding-left: 10px;
+                padding-right: 10px;                        
+            }
+            .accordion {
+                width: 31%;
+                margin-bottom: 75px;                
+                @include tablet {
+                    width: 48%;                        
+                }
+                @include mobile {
+                    width: 100%;
+                    margin-bottom: 35px;                        
+                }
+                .accordion-title {
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    background-color: #29bab5;
+                    padding: 20px;
+                    color: white;
+                    font-size: 24px;
+                    font-family: "Source Sans Regular";
+                    max-height: 70px;
+                    @include tablet {
+                        font-size: 17px;                        
+                    }
+                    @include mobile {
+                        font-size: 16px;
+                        position: relative;
+                        text-align: left;
+                        max-height: 48px;
+                        padding: 11px 20px;
+                        justify-content: flex-start;                        
+                    }
+                    span {
+                        color: #ffd340;
+                        margin-right: 20px;
+                        font-size: 32px;
+                        @include mobile {
+                            font-size: 27px;                      
+                        }
+                    }
+                    .bigger-icon {
+                        font-size: 35px;
+                    }
+                    .mobile-accordion {
+                        color: white;
+                        position: absolute;
+                        right: 10px;
+                        font-size: 18px;
+                        top: 15px;
+                        display: none;
+                        @include mobile {
+                            display: block;                        
+                        }
+                    }
+                }
+                ul {
+                    list-style: none;
+                    @include mobile {
+                        display: none;                        
+                    }
+                    li {
+                        .accordion-element {
+                            padding: 20px 15px;
+                            position: relative;
+                            font-size: 18px;
+                            font-family: "Source Sans Regular";
+                            color: #808080;
+                            border-bottom: 1px solid #808080;
+                            padding-right: 30px;
+                            cursor: pointer;
+                        @include mobile {
+                                font-size: 14px;                        
+                        }
+                        span {
+                            position: absolute;
+                            right: 10px;
+                            font-size: 18px;
+                            color: #808080;
+                            top: 40%;
+                        }
+                        }
+                        .accordion-dropdown {
+                            padding: 20px 15px;
+                            background-color: #daf3f2;
+                            display: none;
+                            @include mobile {
+                                font-size: 13px;
+                                line-height: 17px;                        
+                            }
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+
+.you-dare {
+    background: url("../img/Desktop/footer.jpg");
+    height: 850px;
+    width: 100%;
+    text-align: center;
+    background-position: bottom center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    position: relative;
+    @include tablet {
+        height: 700px;                        
+    }
+    @include mobile {
+        background: url("../img/Mobile/footer.jpg");
+        background-size: cover;
+        height: 480px;
+        background-repeat: no-repeat;
+        background-position: bottom;                        
+    }  
+    h2 {
+        font-size: 48px;
+        font-family: "KGSecond";
+        color: #fb4304;
+        text-transform: uppercase;
+        @include tablet {
+            font-size: 25px;                        
+        }
+        @include mobile {
+            font-size: 16px;                        
+        }        
+    }
+    .cloud {
+        background: url(../img/Desktop/booble_6.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+        max-width: 479px;
+        padding: 90px 92px;
+        position: relative;
+        left: -80px;
+        line-height: 31px;
+        box-sizing: border-box;
+        height: 409px;
+        margin-top: 37px;
+        font-family: "Source Sans Regular";
+        font-size: 24px;
+        text-align: left;
+        padding-right: 75px;
+        @include tablet {
+            font-size: 16px;
+            max-width: 410px;
+            padding: 96px 55px;
+            position: relative;
+            left: -80px;
+            height: 347px;
+            margin-top: 37px;
+            font-family: "Source Sans Regular";                        
+        }
+        @include mobile {
+            background: url("../img/Mobile/booble_5.png");
+            max-width: 300px;
+            max-height: 250px;
+            background-size: cover;
+            left: -10px;
+            margin-top: 9px;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 70px 39px;                        
+        }        
+    }    
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 325px;
+
+    @include mobile {
+        height: 165px;                        
+    }
+    .footer-links {
+        text-align: center;
+        font-size: 30px;
+        a {
+            &:first-child {
+                margin-right: 15px
+            }
+            &:nth-child(2) {
+                margin-left: 15px
+            }
+            text-transform: uppercase;
+            font-size: 30px;
+            color: #2b2523;
+            font-family: "Source Sans Regular";
+            @include mobile {
+                font-size: 16px;                        
+            }
+        }
+    }
+    .logos-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+        img {            
+            display: block;
+            @include mobile {
+                margin-right: 15px;                         
+            }
+        }
+        .visa {
+            max-width: 80px;
+            @include mobile {
+                max-width: 50px;
+                margin-left: 10px;                         
+            }
+        }
+        .mastercard {
+            max-width: 100px;
+            @include mobile {
+                max-width: 65px;                        
+            }
+        }
+        .paypal {
+            max-width: 160px;
+            @include mobile {
+                max-width: 110px;                        
+            }
+        }
+    }
+}
